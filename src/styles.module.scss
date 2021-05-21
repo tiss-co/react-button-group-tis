@@ -1,0 +1,93 @@
+$shadow-light: #c3c2c1;
+$shadow-dark: transparent;
+$screen_width_HD: 1280px;
+$font-family-medium: Helvetica-Neue-Medium;
+
+$bg-box-light: #ffffff;
+$bg-box-dark: #242526;
+$bg-normal-light: #ffffff;
+$bg-normal-dark: #3a3b3c;
+$bg-active: #1977f2;
+$font-normal-light: #2a2a2a;
+$font-normal-dark: #e5e6ec;
+$font-active: #f7f7f7;
+
+:root {
+  --BG-button-min-width: 75px;
+  --BG-button-padding: 0.35vw 0.75vw;
+  --BG-border-radius: 0.25vw;
+
+  @media (max-width: $screen_width_HD) {
+    --BG-button-padding: 7.5px 15px;
+    --BG-border-radius: 4px;
+  }
+
+  //mobile
+  @media (hover: none) and (pointer: coarse) {
+    --BG-button-padding: 7.5px 10px;
+    --BG-border-radius: 5px;
+    --BG-button-min-width: 50px;
+  }
+}
+
+.ButtonGroup {
+  width: auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  &.Column {
+    flex-flow: column;
+  }
+}
+
+.Button {
+  transition: 0.2s;
+  background-color: $bg-normal-light;
+  color: $font-normal-light;
+  font-family: $font-family-medium;
+  font-size: var(--font-size-x-small);
+  outline: 0;
+  margin: 0;
+  padding: var(--BG-button-padding);
+  cursor: pointer;
+  border: 0.5px solid $bg-box-light;
+  box-shadow: 0 2px 3px $shadow-light;
+  min-width: var(--BG-button-min-width) !important;
+  @media (max-width: $screen_width_HD) {
+    font-size: var(--font-size-small);
+  }
+
+  &.ActiveButton {
+    background-color: $bg-active;
+    color: $font-active;
+    border: 0.5px solid $bg-active;
+  }
+
+  &.FirstButton {
+    border-top-left-radius: var(--BG-border-radius);
+    border-bottom-left-radius: var(--BG-border-radius);
+  }
+
+  &.MiddleButton {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  &.LastButton {
+    border-top-right-radius: var(--BG-border-radius);
+    border-bottom-right-radius: var(--BG-border-radius);
+  }
+
+  &.Dark {
+    background-color: $bg-normal-dark;
+    color: $font-normal-dark;
+    border-color: $bg-box-dark;
+    box-shadow: 0 2px 3px $shadow-dark;
+    &.ActiveButton {
+      background-color: $bg-active;
+      color: $font-active;
+      border-color: $bg-active;
+    }
+  }
+}
