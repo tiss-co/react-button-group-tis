@@ -26,8 +26,8 @@ export const ButtonGroup = ({
 
   return (
     <div
-      className={classNames(css.ButtonGroup, {
-        [css.Column]: false
+      className={classNames(css.Container_ButtonGroupTis, {
+        [css.Column_ButtonGroupTis]: false
       }, className)}
       style={style}
     >
@@ -35,12 +35,12 @@ export const ButtonGroup = ({
         <button
           key={index + '0'}
           ref={index === activeIndex ? firstActiveButtonRef : null}
-          className={classNames(css.Button, {
-            [css.ActiveButton]: index === activeIndex,
-            [css.FirstButton]: index === 0,
-            [css.LastButton]: index === items.length - 1,
-            [css.MiddleButton]: index > 0 && index < items.length - 1,
-            [css.Dark]: darkMode
+          className={classNames(css.Button_ButtonGroupTis, {
+            [css.ActiveButton_ButtonGroupTis]: index === activeIndex,
+            [css.FirstButton_ButtonGroupTis]: index === 0,
+            [css.LastButton_ButtonGroupTis]: index === items.length - 1,
+            [css.MiddleButton_ButtonGroupTis]: index > 0 && index < items.length - 1,
+            [css.Dark_ButtonGroupTis]: darkMode
           })}
           onClick={event => handleButtonClick(index, event)}
         >

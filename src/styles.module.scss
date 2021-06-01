@@ -30,18 +30,18 @@ $font-active: #f7f7f7;
   }
 }
 
-.ButtonGroup {
+.Container_ButtonGroupTis {
   width: auto;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  &.Column {
+  &.Column_ButtonGroupTis{
     flex-flow: column;
   }
 }
 
-.Button {
+.Button_ButtonGroupTis {
   transition: 0.2s;
   background-color: $bg-normal-light;
   color: $font-normal-light;
@@ -58,33 +58,33 @@ $font-active: #f7f7f7;
     font-size: var(--font-size-small);
   }
 
-  &.ActiveButton {
+  &.ActiveButton_ButtonGroupTis {
     background-color: $bg-active;
     color: $font-active;
     border: 0.5px solid $bg-active;
   }
 
-  &.FirstButton {
+  &.FirstButton_ButtonGroupTis {
     border-top-left-radius: var(--BG-border-radius);
     border-bottom-left-radius: var(--BG-border-radius);
   }
 
-  &.MiddleButton {
+  &.MiddleButton_ButtonGroupTis {
     border-right: 0;
     border-left: 0;
   }
 
-  &.LastButton {
+  &.LastButton_ButtonGroupTis {
     border-top-right-radius: var(--BG-border-radius);
     border-bottom-right-radius: var(--BG-border-radius);
   }
 
-  &.Dark {
+  &.Dark_ButtonGroupTis {
     background-color: $bg-normal-dark;
     color: $font-normal-dark;
     border-color: $bg-box-dark;
     box-shadow: 0 2px 3px $shadow-dark;
-    &.ActiveButton {
+    &.ActiveButton_ButtonGroupTis {
       background-color: $bg-active;
       color: $font-active;
       border-color: $bg-active;
