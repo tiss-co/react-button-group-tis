@@ -9,7 +9,8 @@ export const ButtonGroup = ({
   activeIndex: propsActiveIndex = 0,
   onItemClick,
   style,
-  darkMode = false
+  darkMode = false,
+  id,
 }) => {
   const [activeIndex, setActiveIndex] = useState(propsActiveIndex);
 
@@ -30,6 +31,7 @@ export const ButtonGroup = ({
         [css.Column_ButtonGroupTis]: false
       }, className)}
       style={style}
+      id={id}
     >
       {items.map((label, index) => (
         <button
@@ -58,4 +60,5 @@ ButtonGroup.propTypes = {
   onItemClick: PropTypes.func.isRequired,
   style: PropTypes.object,
   darkMode: PropTypes.bool,
+  id: PropTypes.string,
 };
