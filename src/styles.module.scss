@@ -1,7 +1,6 @@
 $shadow-light: #c3c2c1;
 $shadow-dark: transparent;
 $screen_width_HD: 1280px;
-$font-family-medium: Helvetica-Neue-Medium;
 
 $bg-box-light: #ffffff;
 $bg-box-dark: #242526;
@@ -36,7 +35,7 @@ $font-active: #f7f7f7;
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  &.Column_ButtonGroupTis{
+  &.Column_ButtonGroupTis {
     flex-flow: column;
   }
 }
@@ -45,7 +44,6 @@ $font-active: #f7f7f7;
   transition: 0.2s;
   background-color: $bg-normal-light;
   color: $font-normal-light;
-  font-family: $font-family-medium;
   font-size: var(--font-size-x-small);
   outline: 0;
   margin: 0;
